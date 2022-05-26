@@ -29,7 +29,6 @@ class AuthController {
             res.json({
                 hash: `${hash}.${expires}`,
                 phone,
-                otp,
             })
         } catch(err) {
             console.log(err);
@@ -71,7 +70,6 @@ class AuthController {
             res.json({
                 hash: `${hash}.${expires}`,
                 email,
-                otp,
             })
         } catch(err) {
             console.log(err);
