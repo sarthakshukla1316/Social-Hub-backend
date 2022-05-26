@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 const corsOption = {
     credentials: true,
-    origin: '*',
+    origin: process.env.FRONTEND_URL,
 }
 
 app.use(cors(corsOption));
