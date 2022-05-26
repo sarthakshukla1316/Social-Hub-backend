@@ -28,6 +28,7 @@ app.use('/storage', express.static('storage'));
 
 const PORT = process.env.PORT || 5500;
 
+app.get('/', (req, res) => res.send('Server is running...'));
 DbConnect();
 app.use(express.json({ limit: '8mb' }));
 app.use(router);

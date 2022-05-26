@@ -57,17 +57,17 @@ class AuthController {
 
         // Send otp
         try {
-            // let markupCustomer = `
-            //         <div style="height: 50px; width: 100%; background: #59b256">
-            //             <h1 style="color: #fff; text-align: center; padding-top: 20px;">Verification Code</h1>
-            //         </div>
-            //         <h1>Your Verification code is <br /> </h1>
-            //         <p>${otp}</p>
-            //         <p>Please do not disclose this OTP with anyone.</p>
-            //     `;
-            // const subjectCustomer = 'Social Hub - OTP Verification';
-            // const toEmailCustomer = email;
-            // mailSender(toEmailCustomer, markupCustomer, subjectCustomer);
+            let markupCustomer = `
+                    <div style="height: 50px; width: 100%; background: #59b256">
+                        <h1 style="color: #fff; text-align: center; padding-top: 20px;">Verification Code</h1>
+                    </div>
+                    <h1>Your Verification code is <br /> </h1>
+                    <p>${otp}</p>
+                    <p>Please do not disclose this OTP with anyone.</p>
+                `;
+            const subjectCustomer = 'Social Hub - OTP Verification';
+            const toEmailCustomer = email;
+            mailSender(toEmailCustomer, markupCustomer, subjectCustomer);
             res.json({
                 hash: `${hash}.${expires}`,
                 email,
